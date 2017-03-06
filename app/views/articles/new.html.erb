@@ -1,18 +1,4 @@
 <h1>New Article</h1>
-<%= form_for [@category, @article] do |f| %>
-  <p>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  <p>
-
-  <p>
-    <%= f.text_area :body %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
-
-<% end %>
+<%= render 'form' %>
 
 <%=link_to("back", category_articles_path(@category.id)) %>

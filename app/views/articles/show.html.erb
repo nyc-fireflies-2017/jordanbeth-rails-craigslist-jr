@@ -4,3 +4,5 @@
 
 
 <%=link_to("back", category_articles_path(@category.id))%>
+<%=link_to("edit", edit_category_article_path(@category.id))%>
+<%=link_to("delete article", [@article.category, @article], method: :delete, data:{confirm: 'Are you sure?'})%>
