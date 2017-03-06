@@ -1,0 +1,10 @@
+<h1><%=@category.name%></h5>
+
+<ul>
+  <%@articles.each do |article|%>
+  <li><%=link_to("#{article.title}", category_article_path(@category.id, article.id))%></li>
+  <% end %>
+</ul>
+
+<%= link_to("new article", new_category_article_path) %><br>
+<%= link_to("back", categories_path) %>
